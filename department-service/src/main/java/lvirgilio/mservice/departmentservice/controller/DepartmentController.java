@@ -15,12 +15,12 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-    @PostMapping("/")
+    @PostMapping
     public Department addDepartment(@RequestBody Department department) {
         return departmentService.createDepartment(department);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<Department> findAll() {
         return departmentService.findAllDepartments();
     }

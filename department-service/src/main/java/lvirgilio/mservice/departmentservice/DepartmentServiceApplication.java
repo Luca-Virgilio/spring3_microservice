@@ -10,7 +10,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@ComponentScan(basePackageClasses = {DepartmentController.class, DepartmentService.class, DepartmentRepository.class})
 public class DepartmentServiceApplication {
 
 	public static void main(String[] args) {
