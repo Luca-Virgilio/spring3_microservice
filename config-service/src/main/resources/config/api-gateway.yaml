@@ -12,6 +12,27 @@ management:
       probability: 1.0
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/company-realm
+          jwt-set-uri: http://localhost:8080/realms/company-realm/protocol/openid-connect/certs
+#      client:
+#        provider:
+#          keycloak:
+#            issuer-uri: http://localhost:8080/realms/company-realm
+#          registration:
+#              keycloak:
+#                  client-id: company-manager
+#                  client-secret: qalei3nn4dr7TJX2BFNF09tpWjYFqJYG
+#                  provider: keycloak
+#                  scope: openid
+#                  client-name: company-manager
+
+
   cloud:
     gateway:
       routes:
